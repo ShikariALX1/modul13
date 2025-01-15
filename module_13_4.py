@@ -53,5 +53,10 @@ async def send_calories(message, state):
     await state.finish()
 
 
+@dp.message_handler()
+async def all_messages(message):
+    print(f'Введите команду /start, чтобы начать общение.')
+
+
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
